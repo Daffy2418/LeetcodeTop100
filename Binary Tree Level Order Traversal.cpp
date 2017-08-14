@@ -7,7 +7,9 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
- //DFS
+//DFS
+//求每一层的节点，并且存在一个二维数组里，需要求出树的深度，根据深度来建立二维数组
+//用DFS求出树的高度，再用DFS对每一层遍历
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
