@@ -1,0 +1,17 @@
+/*
+*sum[i]=max(sum[i-1]+a[i],a[i])
+*/
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int res=nums[0];
+        vector<int> sum(nums.size(),0);
+        sum[0]=nums[0];
+        for(int i=1;i<nums.size();i++){
+            sum[i]=max(sum[i-1]+nums[i],nums[i]);
+            if(sum[i]>res)
+                res=sum[i];
+        }
+        return res;
+    }
+};
