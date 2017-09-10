@@ -26,6 +26,7 @@ public:
         while(!q.empty()){
             int cur=q.front();
             q.pop();
+            /*c++ .begin()返回的是指针*/
             for(auto it=g[cur].begin();it!=g[cur].end();it++)
                 if(--in_degree[*it]==0) q.push(*it);
         }
